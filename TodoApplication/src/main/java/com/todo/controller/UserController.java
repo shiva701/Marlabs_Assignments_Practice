@@ -45,7 +45,7 @@ public class UserController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("get request is not supported!!");
+		System.out.println("**** Redirecting request to register.jsp page ****");
 		response.sendRedirect("register/register.jsp");
 	}
 
@@ -95,6 +95,7 @@ public class UserController extends HttpServlet {
 			e.printStackTrace();
 		}
 
+		System.out.println("***calling request dispatcher in user controller***");
 		RequestDispatcher rd = request.getRequestDispatcher("register/register.jsp");
 		rd.forward(request, response);
 	}
