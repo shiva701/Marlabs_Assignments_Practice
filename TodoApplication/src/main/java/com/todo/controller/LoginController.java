@@ -86,7 +86,7 @@ public class LoginController extends HttpServlet {
 				RequestDispatcher rd = request.getRequestDispatcher("todo/todo-list.jsp");
 				rd.forward(request, response);
 			} else {
-				System.out.println("**** User credentials not mactched ****");
+				System.out.println("**** User credentials not matched ****");
 //				HttpSession session = request.getSession();
 				response.sendRedirect("login/login.jsp");
 			}
